@@ -6,5 +6,5 @@ RUN apt-get update && \
     virtualenv && \
     apt-get clean
 
-RUN virtualenv /venv -ppython3 && /venv/bin/pip install flake8
+RUN virtualenv /venv -ppython3 && /venv/bin/pip install black 
 ENV PATH=/venv/bin:$PATH
