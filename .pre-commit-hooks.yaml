@@ -1,6 +1,6 @@
 - id: flake8-docker-not-for-production
   name: flake8 (via docker)
   description: flake8, but provided by docker
-  entry: autofix.sh
+  entry: black --py36 -S "$@" || fixed=1
   language: docker
   files: \.py$
