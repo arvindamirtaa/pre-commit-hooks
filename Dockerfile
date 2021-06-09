@@ -6,8 +6,5 @@ RUN apt-get update && \
     virtualenv && \
     apt-get clean
 
-COPY ./autofix.sh /autofix.sh
-
 RUN virtualenv /venv -ppython3 && /venv/bin/pip install flake8 autoflake isort
-ENV PATH=/:$PATH
 ENV PATH=/venv/bin:$PATH
