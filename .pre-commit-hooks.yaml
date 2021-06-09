@@ -1,6 +1,6 @@
 - id: black-docker-not-for-production
   name: black (via docker)
   description: black, but provided by docker
-  entry: black --py36 -S "$@" || fixed=1
+  entry: black --py36
   language: docker
   files: \.py$
