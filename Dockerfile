@@ -1,8 +1,7 @@
-FROM node:14.17
+FROM python:3.7
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-    python3 \
     virtualenv && \
     apt-get clean
 
