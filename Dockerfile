@@ -5,5 +5,5 @@ RUN apt-get update && \
     virtualenv && \
     apt-get clean
 
-RUN virtualenv /venv -ppython3 && /venv/bin/pip install black==18.9b0
+RUN virtualenv /venv -ppython3 && /venv/bin/pip install black==18.9b0 isort==4.3.21 autoflake==1.3.1
 ENV PATH=/venv/bin:$PATH

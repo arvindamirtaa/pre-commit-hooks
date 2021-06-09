@@ -1,6 +1,11 @@
-- id: black-docker-not-for-production
+- id: black
   name: black (via docker)
-  description: black, but provided by docker
-  entry: black --py36
+  entry: black --py36 -S
+  language: docker
+  files: \.py$
+
+- id: isort
+  name: isort (via docker)
+  entry: isort --recursive --apply
   language: docker
   files: \.py$
